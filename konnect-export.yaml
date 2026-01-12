@@ -1,0 +1,14 @@
+_format_version: "3.0"
+_konnect:
+  control_plane_name: gateway-control-plane
+plugins: 
+  - name: myplugin 
+services:
+  - name: example_service
+    url: https://httpbin.konghq.com
+routes:
+  - name: example_route
+    service:
+      name: example_service
+    paths:
+    - "/mock"
